@@ -176,8 +176,11 @@ $endfor$
 
 \begin{document}
 $if(title)$
-{\huge\textsf{\textbf{$title$}}}
+{\huge\textsf{\textbf{$title$}}}\\
 %\maketitle
+$endif$
+$if(author)$
+{\normalsize $author$}\\[1ex]
 $endif$
 $if(abstract)$
 \begin{abstract}
