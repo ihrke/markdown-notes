@@ -17,3 +17,6 @@ all: $(PDF_FILES)
 .PHONY : clean
 clean :
 	-rm $(PDF_FILES) $(TEX_FILES) *.aux *.out *.log *.fdb_latexmk *.fls *.synctex.gz
+
+watch: $(MD_FILES) $(BIBLIOGRAPHY)
+	fswatch -o $^ | xargs -n1 -I{} make
