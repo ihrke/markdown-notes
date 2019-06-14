@@ -167,7 +167,7 @@ $endfor$
 \usepackage[headsepline]{scrlayer-scrpage}
 \clearpairofpagestyles
 \ohead{\pagemark}
-\ihead{$title$}
+\ihead{$if(subtitle)$$subtitle$$else$$title$$endif$}
 \usepackage{lastpage}
 \renewcommand*\pagemark{{\usekomafont{pagenumber}Page\nobreakspace\thepage/\pageref*{LastPage}}}
 \addtokomafont{pageheadfoot}{\upshape}
@@ -176,8 +176,11 @@ $endfor$
 
 \begin{document}
 $if(title)$
-{\huge\textsf{\textbf{$title$}}}\\
+{\huge\textsf{\textbf{$title$}}}\\[1ex]
 %\maketitle
+$endif$
+$if(subtitle)$
+{\Large\textsf{\textbf{$subtitle$}}}\\[.5ex]
 $endif$
 $if(author)$
 {\normalsize $author$}\\[1ex]
