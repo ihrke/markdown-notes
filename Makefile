@@ -12,7 +12,7 @@ all: $(PDF_FILES)
 	pdflatex $<
 
 %.tex: %.md
-	$(PANDOC) -s -S --filter pandoc-fignos --filter pandoc-citeproc --template $(TEMPLATE) $< -o $@ --bibliography ${BIBLIOGRAPHY}
+	$(PANDOC) -f markdown+smart --filter pandoc-fignos --filter pandoc-citeproc --template $(TEMPLATE) $< -o $@ --bibliography ${BIBLIOGRAPHY}
 
 .PHONY : clean
 clean :

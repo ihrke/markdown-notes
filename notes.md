@@ -1,5 +1,6 @@
 ---
-title: Important notes
+title: Comments on ``Cognitive ability and motivation in a new effort-based decision-making task testing healthy participants showing subclinical symptoms of schizophrenia'' by Thea Simensen
+author: Matthias Mittner, UiT
 ...
 
 # Introduction
