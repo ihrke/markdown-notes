@@ -168,6 +168,7 @@ $endfor$
 \clearpairofpagestyles
 \ohead{\pagemark}
 \ihead{$if(subtitle)$$subtitle$$else$$title$$endif$}
+\ofoot{{\footnotesize Last update: \today}}
 \usepackage{lastpage}
 \renewcommand*\pagemark{{\usekomafont{pagenumber}Page\nobreakspace\thepage/\pageref*{LastPage}}}
 \addtokomafont{pageheadfoot}{\upshape}
@@ -184,6 +185,9 @@ $if(subtitle)$
 $endif$
 $if(author)$
 {\normalsize $author$}\\[1ex]
+$endif$
+$if(date)$
+{\normalsize $date$}\\[1ex]
 $endif$
 $if(abstract)$
 \begin{abstract}

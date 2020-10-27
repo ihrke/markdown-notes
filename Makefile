@@ -1,4 +1,4 @@
-MD_FILES=notes.md ## add more files here if needed
+MD_FILES=labmanual.md ## add more files here if needed
 BIBLIOGRAPHY=references.bib
 TEX_FILES:=$(MD_FILES:.md=.tex)
 PDF_FILES:=$(MD_FILES:.md=.pdf)
